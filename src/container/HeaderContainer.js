@@ -1,15 +1,12 @@
 import Header from "../components/Header";
 import { connect } from "react-redux";
+import cardItems from "../service/reducers/reducer";
 
 
 
-const mapStateToProps= state=>({
- data: state.cardItems
-})
-
-const mapDispatchToProps = dispatch =>({
-
+const mapStateToProps= cardItems=>({
+ cards: cardItems
 })
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(Header)
+export default connect(mapStateToProps )(Header)
